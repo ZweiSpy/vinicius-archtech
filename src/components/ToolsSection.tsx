@@ -45,7 +45,6 @@ const skillBlocks: SkillBlock[] = [
     icon: Languages,
     skills: [
       "Inglês",
-      "Alemão",
       "Inteligência Artificial aplicada",
     ],
     accent: "from-indigo-500 to-purple-500",

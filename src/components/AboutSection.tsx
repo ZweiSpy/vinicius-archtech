@@ -1,6 +1,7 @@
 "use client";
 
-import { User, Briefcase, Code2 } from "lucide-react";
+import Image from "next/image";
+import { Briefcase, Code2 } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 
 export function AboutSection() {
@@ -19,10 +20,15 @@ export function AboutSection() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-cyan-500/30 via-blue-500/20 to-indigo-500/30 blur-2xl" />
-              <div className="relative flex h-64 w-64 items-center justify-center rounded-full border border-cyan-500/30 bg-gradient-to-br from-zinc-900 to-zinc-800 shadow-2xl shadow-cyan-500/10 sm:h-72 sm:w-72">
-                <div className="flex h-[calc(100%-8px)] w-[calc(100%-8px)] items-center justify-center rounded-full bg-zinc-950">
-                  <User className="h-24 w-24 text-cyan-400/60" strokeWidth={1} />
-                </div>
+              <div className="relative h-64 w-64 overflow-hidden rounded-full border-2 border-cyan-400/40 shadow-2xl shadow-cyan-500/25 sm:h-72 sm:w-72">
+                <Image
+                  src="/perfil.jpeg"
+                  alt="Foto de perfil profissional"
+                  fill
+                  sizes="(max-width: 640px) 256px, 288px"
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="absolute -bottom-2 -right-2 rounded-xl border border-cyan-500/30 bg-zinc-900 p-3 shadow-lg">
                 <Code2 className="h-6 w-6 text-cyan-400" />
