@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Briefcase, Code2 } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { PythonTerminal } from "@/components/PythonTerminal";
 
 export function AboutSection() {
   return (
@@ -15,8 +16,8 @@ export function AboutSection() {
           <div className="mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500" />
         </div>
 
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Avatar */}
+        {/* Profile + narrative */}
+        <div className="mb-14 grid items-center gap-12 lg:mb-16 lg:grid-cols-2">
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-cyan-500/30 via-blue-500/20 to-indigo-500/30 blur-2xl" />
@@ -39,7 +40,6 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Text */}
           <div className="space-y-5 text-zinc-400 leading-relaxed">
             <p>
               Minha trajetória profissional é híbrida e estratégica: formado em{" "}
@@ -63,6 +63,30 @@ export function AboutSection() {
               liberadas para o que realmente importa:{" "}
               <strong className="text-zinc-200">crescer</strong>.
             </p>
+          </div>
+        </div>
+
+        {/* Narrative summary + Interactive Terminal */}
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
+          <div className="order-2 space-y-4 lg:order-1">
+            <p className="text-sm font-medium uppercase tracking-widest text-cyan-400/80">
+              Runtime ao vivo
+            </p>
+            <h3 className="text-2xl font-bold text-white sm:text-3xl">
+              Python em ação —{" "}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                automação que se vê
+              </span>
+            </h3>
+            <p className="max-w-md leading-relaxed text-zinc-400">
+              Mais do que código no currículo: uma demonstração visual de como
+              montei um stack mental em Python — carregar skills, detectar
+              gargalos e executar automações que cortam tempo operacional.
+            </p>
+          </div>
+
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+            <PythonTerminal />
           </div>
         </div>
       </div>
