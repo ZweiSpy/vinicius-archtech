@@ -1,3 +1,6 @@
+"use client";
+
+import { LanguageProvider } from "@/context/LanguageContext";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -8,7 +11,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function Home() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <main>
         <HeroSection />
@@ -18,6 +21,6 @@ export default function Home() {
         <FooterSection />
       </main>
       <FloatingWhatsApp />
-    </>
+    </LanguageProvider>
   );
 }

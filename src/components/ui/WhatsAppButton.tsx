@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface WhatsAppButtonProps {
   variant?: "primary" | "outline" | "floating";
@@ -12,8 +13,11 @@ interface WhatsAppButtonProps {
 export function WhatsAppButton({
   variant = "primary",
   className = "",
-  label = "Fale Comigo no WhatsApp",
+  label,
 }: WhatsAppButtonProps) {
+  const { dict } = useLanguage();
+  const ctaLabel = label ?? dict.common.whatsappCta;
+
   const baseStyles =
     "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300";
 
@@ -44,7 +48,7 @@ export function WhatsAppButton({
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Fale comigo no WhatsApp"
+        aria-label={dict.common.whatsappAria}
         className={`${baseStyles} ${variants.floating} ${className}`}
       >
         <MessageCircle className="h-6 w-6" />
@@ -60,7 +64,7 @@ export function WhatsAppButton({
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
       <MessageCircle className="h-5 w-5" />
-      {label}
+      {ctaLabel}
     </a>
   );
 }

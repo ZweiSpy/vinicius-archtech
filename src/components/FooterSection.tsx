@@ -4,41 +4,30 @@ import { Github, Linkedin, ExternalLink } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { SOCIAL_LINKS } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 const socialItems = [
-  {
-    label: "GitHub",
-    href: SOCIAL_LINKS.github,
-    icon: Github,
-  },
-  {
-    label: "LinkedIn",
-    href: SOCIAL_LINKS.linkedin,
-    icon: Linkedin,
-  },
-  {
-    label: "Workana",
-    href: SOCIAL_LINKS.workana,
-    icon: ExternalLink,
-  },
-  {
-    label: "99freelas",
-    href: SOCIAL_LINKS.freelas,
-    icon: ExternalLink,
-  },
+  { label: "GitHub", href: SOCIAL_LINKS.github, icon: Github },
+  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin, icon: Linkedin },
+  { label: "Workana", href: SOCIAL_LINKS.workana, icon: ExternalLink },
+  { label: "99freelas", href: SOCIAL_LINKS.freelas, icon: ExternalLink },
 ];
 
 export function FooterSection() {
+  const { dict } = useLanguage();
+  const { footer } = dict;
+
   return (
     <SectionWrapper id="contato" className="px-6 py-24" delay={0.1}>
       <footer className="mx-auto max-w-4xl text-center">
         <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-10 backdrop-blur-md sm:p-14">
           <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
-            Precisa otimizar a rotina do seu negócio?
+            {footer.headline}
           </h2>
           <p className="mb-8 text-lg text-zinc-400">
-            Vamos construir a{" "}
-            <span className="text-cyan-400">solução ideal</span>.
+            {footer.subBefore}{" "}
+            <span className="text-cyan-400">{footer.subAccent}</span>
+            {footer.subAfter}
           </p>
 
           <WhatsAppButton className="mb-10" />
@@ -60,8 +49,7 @@ export function FooterSection() {
 
           <div className="border-t border-white/10 pt-8">
             <p className="text-sm text-zinc-500">
-              © {new Date().getFullYear()} Zwei — BPO Financeiro, Automação &
-              Desenvolvimento Web. Todos os direitos reservados.
+              © {new Date().getFullYear()} {footer.copyright}
             </p>
           </div>
         </div>

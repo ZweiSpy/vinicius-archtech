@@ -3,11 +3,13 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function HeroSection() {
+  const { dict } = useLanguage();
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
-      {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 bg-radial-glow" />
       <div
         className="pointer-events-none absolute inset-0 bg-grid-pattern"
@@ -23,21 +25,19 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="mb-6 inline-block rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-400">
-            BPO Financeiro · Automação · Desenvolvimento Web
+            {dict.hero.badge}
           </span>
 
           <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-            Soluções Inteligentes em{" "}
+            {dict.hero.titleBefore}{" "}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              BPO Financeiro, Automação de Processos
+              {dict.hero.titleHighlight}
             </span>{" "}
-            e Engenharia de Dados.
+            {dict.hero.titleAfter}
           </h1>
 
           <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-            Aliando inteligência de negócios, gestão estratégica e
-            desenvolvimento em Python para eliminar gargalos operacionais e
-            escalar a eficiência da sua empresa.
+            {dict.hero.subtitle}
           </p>
 
           <WhatsAppButton />
@@ -52,9 +52,11 @@ export function HeroSection() {
           <a
             href="#sobre"
             className="flex flex-col items-center gap-2 text-zinc-500 transition-colors hover:text-cyan-400"
-            aria-label="Rolar para a seção Sobre"
+            aria-label={dict.hero.exploreAria}
           >
-            <span className="text-xs uppercase tracking-widest">Explorar</span>
+            <span className="text-xs uppercase tracking-widest">
+              {dict.hero.explore}
+            </span>
             <ChevronDown className="h-5 w-5 animate-bounce" />
           </a>
         </motion.div>

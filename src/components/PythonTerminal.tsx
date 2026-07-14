@@ -2,55 +2,13 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
-
-type LineKind = "command" | "sistema" | "sucesso" | "atencao" | "robo";
-
-interface ScriptLine {
-  kind: LineKind;
-  text: string;
-  pauseBefore?: number;
-}
-
-const SCRIPT: ScriptLine[] = [
-  { kind: "command", text: "import vinicius_archtech as arch", pauseBefore: 400 },
-  { kind: "command", text: "arch.initialize_system()", pauseBefore: 350 },
-  {
-    kind: "sistema",
-    text: "[SISTEMA] Iniciando varredura de processos... OK",
-    pauseBefore: 500,
-  },
-  {
-    kind: "command",
-    text: 'arch.load_skills(["Python", "BPO Financeiro", "Automação", "ERP"])',
-    pauseBefore: 400,
-  },
-  {
-    kind: "sucesso",
-    text: "[SUCESSO] Habilidades carregadas com sucesso.",
-    pauseBefore: 450,
-  },
-  {
-    kind: "command",
-    text: 'arch.execute_automation(target="Gargalos Operacionais")',
-    pauseBefore: 400,
-  },
-  {
-    kind: "atencao",
-    text: "[ATENÇÃO] Rotinas manuais detectadas.",
-    pauseBefore: 500,
-  },
-  { kind: "robo", text: "[ROBÔ] Refatorando tarefas...", pauseBefore: 600 },
-  {
-    kind: "sucesso",
-    text: "[SUCESSO] Tempo de operação reduzido em 85%.",
-    pauseBefore: 550,
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import type { TerminalLineKind } from "@/lib/dictionaries";
 
 const TYPING_SPEED_MS = 22;
 const LOOP_RESTART_MS = 4200;
 
-function lineClass(kind: LineKind): string {
+function lineClass(kind: TerminalLineKind): string {
   switch (kind) {
     case "command":
       return "text-cyan-400";
@@ -65,24 +23,29 @@ function lineClass(kind: LineKind): string {
   }
 }
 
-function formatDisplay(kind: LineKind, text: string): string {
+function formatDisplay(kind: TerminalLineKind, text: string): string {
   if (kind === "command") return `> ${text}`;
   return text;
 }
 
 interface RenderedLine {
-  kind: LineKind;
+  kind: TerminalLineKind;
   text: string;
 }
 
 export function PythonTerminal() {
+  const { locale, dict } = useLanguage();
+  const script = dict.terminal.script;
+
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-40px" });
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const scriptRef = useRef(script);
+  scriptRef.current = script;
 
   const [lines, setLines] = useState<RenderedLine[]>([]);
   const [activeText, setActiveText] = useState("");
-  const [activeKind, setActiveKind] = useState<LineKind>("command");
+  const [activeKind, setActiveKind] = useState<TerminalLineKind>("command");
   const [isTyping, setIsTyping] = useState(false);
   const [done, setDone] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
@@ -106,9 +69,10 @@ export function PythonTerminal() {
     setDone(false);
     setIsTyping(true);
 
+    const currentScript = scriptRef.current;
     let cumulativeDelay = 0;
 
-    SCRIPT.forEach((line, index) => {
+    currentScript.forEach((line, index) => {
       const full = formatDisplay(line.kind, line.text);
       cumulativeDelay += line.pauseBefore ?? 300;
       const startAt = cumulativeDelay;
@@ -129,7 +93,7 @@ export function PythonTerminal() {
           setLines((prev) => [...prev, { kind: line.kind, text: full }]);
           setActiveText("");
 
-          if (index === SCRIPT.length - 1) {
+          if (index === currentScript.length - 1) {
             setIsTyping(false);
             setDone(true);
             schedule(() => runScript(), LOOP_RESTART_MS);
@@ -147,6 +111,12 @@ export function PythonTerminal() {
       runScript();
     }
   }, [isInView, started, runScript]);
+
+  // Restart animation when language changes
+  useEffect(() => {
+    if (!started) return;
+    runScript();
+  }, [locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const id = setInterval(() => setShowCursor((v) => !v), 530);
@@ -169,25 +139,26 @@ export function PythonTerminal() {
       ref={containerRef}
       className="w-full max-w-xl overflow-hidden rounded-xl border border-cyan-500/20 bg-zinc-950 shadow-lg shadow-cyan-500/20"
       role="img"
-      aria-label="Terminal Python animado demonstrando habilidades em automação"
+      aria-label={dict.terminal.ariaLabel}
     >
-      {/* Title bar — macOS style */}
       <div className="flex items-center gap-2 border-b border-white/5 bg-zinc-900/90 px-4 py-3">
         <span className="h-3 w-3 shrink-0 rounded-full bg-red-500/90" />
         <span className="h-3 w-3 shrink-0 rounded-full bg-yellow-400/90" />
         <span className="h-3 w-3 shrink-0 rounded-full bg-green-500/90" />
         <span className="ml-3 truncate font-mono text-xs text-zinc-500">
-          vinicius@archtech — python3
+          {dict.terminal.windowTitle}
         </span>
       </div>
 
-      {/* Body */}
       <div className="relative min-h-[260px] px-4 py-5 sm:min-h-[320px] sm:px-5 sm:py-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(34,211,238,0.04),transparent_60%)]" />
 
         <pre className="relative z-10 overflow-x-auto whitespace-pre-wrap break-all font-mono text-[11px] leading-relaxed sm:break-normal sm:text-xs md:text-[13px]">
           {lines.map((line, i) => (
-            <div key={`${i}-${line.text.slice(0, 16)}`} className={`${lineClass(line.kind)} mb-1`}>
+            <div
+              key={`${i}-${line.text.slice(0, 16)}`}
+              className={`${lineClass(line.kind)} mb-1`}
+            >
               {line.text}
             </div>
           ))}
