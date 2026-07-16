@@ -27,7 +27,7 @@ export function AboutSection() {
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-cyan-500/30 via-blue-500/20 to-indigo-500/30 blur-2xl" />
               <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-cyan-400/40 bg-zinc-900 shadow-2xl shadow-cyan-500/25 sm:h-64 sm:w-64">
                 <Image
-                  src="/perfil-editado.png"
+                  src="/perfil.jpg"
                   alt={about.photoAlt}
                   fill
                   sizes="(max-width: 640px) 224px, 256px"
