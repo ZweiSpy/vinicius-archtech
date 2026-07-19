@@ -9,24 +9,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Zwei | BPO Financeiro, Automação de Processos & Desenvolvimento Web",
+  title: "Zwei Coorp's | Inovação e Engenharia de Dados",
   description:
-    "Soluções inteligentes em BPO Financeiro, Automação de Processos e Engenharia de Dados. Python, Selenium e desenvolvimento web para escalar a eficiência da sua empresa.",
+    "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
   keywords: [
+    "Zwei Coorp's",
     "BPO Financeiro",
+    "Inteligência Artificial",
     "Automação de Processos",
+    "Engenharia de Dados",
     "Python",
-    "Desenvolvimento Web",
-    "Conta Azul",
-    "Selenium",
   ],
-  authors: [{ name: "Zwei" }],
+  authors: [{ name: "Zwei Coorp's" }],
   openGraph: {
-    title: "Zwei | BPO Financeiro, Automação & Desenvolvimento Web",
+    title: "Zwei Coorp's | Inovação e Engenharia de Dados",
     description:
-      "Aliando inteligência de negócios e desenvolvimento em Python para eliminar gargalos operacionais.",
+      "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
     type: "website",
     locale: "pt_BR",
+    siteName: "Zwei Coorp's",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zwei Coorp's | Inovação e Engenharia de Dados",
+    description:
+      "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
   },
 };
 
