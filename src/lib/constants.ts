@@ -5,5 +5,5 @@ export const SOCIAL_LINKS = {
   linkedin: "https://linkedin.com/in/seu-perfil",
   workana:
     "https://www.workana.com/freelancer/f60aa1ec5d243799cce32b2d05406711",
-  freelas: "https://www.99freelas.com.br/profile/seu-perfil",
+  instagram: "https://www.instagram.com/vinicius.archtech/",
 } as const;

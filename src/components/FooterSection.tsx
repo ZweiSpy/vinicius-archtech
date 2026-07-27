@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, ExternalLink } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Instagram } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { SOCIAL_LINKS } from "@/lib/constants";
@@ -10,7 +10,7 @@ const socialItems = [
   { label: "GitHub", href: SOCIAL_LINKS.github, icon: Github },
   { label: "LinkedIn", href: SOCIAL_LINKS.linkedin, icon: Linkedin },
   { label: "Workana", href: SOCIAL_LINKS.workana, icon: ExternalLink },
-  { label: "99freelas", href: SOCIAL_LINKS.freelas, icon: ExternalLink },
+  { label: "Instagram", href: SOCIAL_LINKS.instagram, icon: Instagram },
 ];
 
 export function FooterSection() {
