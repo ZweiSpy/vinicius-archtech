@@ -9,15 +9,20 @@ import {
   TrendingUp,
   ChevronDown,
   Star,
+  ExternalLink,
+  Smartphone,
+  MessageCircle,
 } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { useLanguage } from "@/context/LanguageContext";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const PROJECT_ICONS: Record<string, ReactNode> = {
   arquiteto: <Bot className="h-6 w-6" />,
   zbot: <Search className="h-6 w-6" />,
   "elite-rodas": <Globe className="h-6 w-6" />,
+  "zwei-finance": <Smartphone className="h-6 w-6" />,
   bpo: <TrendingUp className="h-6 w-6" />,
 };
 
@@ -28,12 +33,16 @@ interface ProjectCardProps {
   impact: string;
   tags: string[];
   featured?: boolean;
+  href?: string;
+  cta?: "site" | "whatsapp";
   labels: {
     featured: string;
     impact: string;
     expandHint: string;
     expandAria: string;
     collapseAria: string;
+    viewSite: string;
+    whatsappDemo: string;
   };
 }
 
@@ -44,9 +53,14 @@ function ProjectCard({
   impact,
   tags,
   featured,
+  href,
+  cta,
   labels,
 }: ProjectCardProps) {
   const [expanded, setExpanded] = useState(false);
+
+  const showSiteCta = cta === "site" && href;
+  const showWhatsappCta = cta === "whatsapp";
 
   return (
     <GlassCard featured={featured}>
@@ -111,6 +125,33 @@ function ProjectCard({
         )}
       </AnimatePresence>
 
+      {(showSiteCta || showWhatsappCta) && (
+        <div className="mt-4">
+          {showSiteCta && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+            >
+              {labels.viewSite}
+              <ExternalLink className="h-3.5 w-3.5" />
+            </a>
+          )}
+          {showWhatsappCta && (
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+            >
+              {labels.whatsappDemo}
+              <MessageCircle className="h-3.5 w-3.5" />
+            </a>
+          )}
+        </div>
+      )}
+
       {!expanded && (
         <p className="mt-3 text-xs text-cyan-400/70">{labels.expandHint}</p>
       )}
@@ -128,6 +169,8 @@ export function PortfolioSection() {
     expandHint: portfolio.expandHint,
     expandAria: portfolio.expandAria,
     collapseAria: portfolio.collapseAria,
+    viewSite: portfolio.viewSite,
+    whatsappDemo: portfolio.whatsappDemo,
   };
 
   return (
@@ -158,6 +201,8 @@ export function PortfolioSection() {
                 impact={project.impact}
                 tags={project.tags}
                 featured={project.featured}
+                href={project.href}
+                cta={project.cta}
                 labels={labels}
               />
             </motion.div>

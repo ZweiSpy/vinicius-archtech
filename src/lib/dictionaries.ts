@@ -62,6 +62,8 @@ export interface Dictionary {
     expandHint: string;
     expandAria: string;
     collapseAria: string;
+    viewSite: string;
+    whatsappDemo: string;
     projects: {
       id: string;
       title: string;
@@ -69,6 +71,17 @@ export interface Dictionary {
       impact: string;
       tags: string[];
       featured?: boolean;
+      href?: string;
+      cta?: "site" | "whatsapp";
+    }[];
+  };
+  integrations: {
+    title: string;
+    titleAccent: string;
+    subtitle: string;
+    items: {
+      name: string;
+      description: string;
     }[];
   };
   tools: {
@@ -156,6 +169,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       expandHint: "Clique na seta para ver o impacto →",
       expandAria: "Expandir detalhes",
       collapseAria: "Recolher detalhes",
+      viewSite: "Ver site",
+      whatsappDemo: "Falar no WhatsApp",
       projects: [
         {
           id: "arquiteto",
@@ -182,6 +197,18 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "Criação de landing page e site institucional focado em conversão e posicionamento digital para empresa física. Arquitetura otimizada ponta a ponta (front-end) para garantir velocidade e atração de clientes.",
           impact: "Presença digital e aceleração comercial.",
           tags: ["Next.js", "Landing Page", "SEO", "Conversão"],
+          href: "https://eliterodas.com.br",
+          cta: "site",
+        },
+        {
+          id: "zwei-finance",
+          title: "Zwei Finance — App de Gestão Financeira",
+          description:
+            "Aplicativo Android (APK) de gestão e finanças focado em eficiência operacional e autonomia do cliente. Controle de fluxo de caixa, organização financeira e visão clara do negócio — em breve na Play Store; demonstração disponível via WhatsApp.",
+          impact:
+            "Autonomia financeira na palma da mão e processos mais ágeis para o cliente.",
+          tags: ["Android", "Finanças", "Produto", "Python/API"],
+          cta: "whatsapp",
         },
         {
           id: "bpo",
@@ -190,6 +217,30 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "Prestação de serviços especializados de estruturação de contas, conciliação diária e relatórios de performance para empresas parceiras através de plataformas como Workana e 99freelas.",
           impact: "Tomada de decisão baseada em dados reais.",
           tags: ["BPO", "Conciliação", "Workana", "99freelas"],
+        },
+      ],
+    },
+    integrations: {
+      title: "Integrações com",
+      titleAccent: "ERPs",
+      subtitle:
+        "Conectamos sua operação aos principais ERPs via API oficial — e, quando a API não cobre o fluxo, usamos automação assistida com segurança e rastreabilidade.",
+      items: [
+        {
+          name: "Conta Azul",
+          description: "Integração via API para dados financeiros e operacionais.",
+        },
+        {
+          name: "Olist (Tiny)",
+          description: "Sincronização de pedidos, estoque e fiscal via API.",
+        },
+        {
+          name: "VHSYS",
+          description: "Automação de rotinas comerciais e financeiras.",
+        },
+        {
+          name: "Outros via API",
+          description: "Qualquer ERP com API documentada — avaliamos e conectamos.",
         },
       ],
     },
@@ -348,6 +399,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       expandHint: "Click the arrow to see the impact →",
       expandAria: "Expand details",
       collapseAria: "Collapse details",
+      viewSite: "View site",
+      whatsappDemo: "Chat on WhatsApp",
       projects: [
         {
           id: "arquiteto",
@@ -374,6 +427,18 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "Creation of a conversion-focused landing page and institutional website for a brick-and-mortar business. End-to-end front-end architecture optimized for speed and customer acquisition.",
           impact: "Digital presence and commercial acceleration.",
           tags: ["Next.js", "Landing Page", "SEO", "Conversion"],
+          href: "https://eliterodas.com.br",
+          cta: "site",
+        },
+        {
+          id: "zwei-finance",
+          title: "Zwei Finance — Financial Management App",
+          description:
+            "Android app (APK) for financial management focused on operational efficiency and client autonomy. Cash-flow control, financial organization, and a clear view of the business — coming soon to the Play Store; demo available via WhatsApp.",
+          impact:
+            "Financial autonomy in the palm of your hand and faster processes for the client.",
+          tags: ["Android", "Finance", "Product", "Python/API"],
+          cta: "whatsapp",
         },
         {
           id: "bpo",
@@ -382,6 +447,30 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "Specialized services in account structuring, daily reconciliation, and performance reporting for partner companies through platforms such as Workana and 99freelas.",
           impact: "Decision-making grounded in real data.",
           tags: ["BPO", "Reconciliation", "Workana", "99freelas"],
+        },
+      ],
+    },
+    integrations: {
+      title: "ERP",
+      titleAccent: "Integrations",
+      subtitle:
+        "We connect your operations to leading ERPs via official APIs — and when the API doesn't cover a flow, we use assisted automation with safety and traceability.",
+      items: [
+        {
+          name: "Conta Azul",
+          description: "API integration for financial and operational data.",
+        },
+        {
+          name: "Olist (Tiny)",
+          description: "Order, inventory, and fiscal sync via API.",
+        },
+        {
+          name: "VHSYS",
+          description: "Automation of commercial and financial routines.",
+        },
+        {
+          name: "Others via API",
+          description: "Any ERP with a documented API — we assess and connect.",
         },
       ],
     },
