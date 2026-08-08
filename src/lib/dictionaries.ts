@@ -17,7 +17,9 @@ export interface Dictionary {
   nav: {
     about: string;
     portfolio: string;
+    process: string;
     tools: string;
+    faq: string;
     contact: string;
     openMenu: string;
     closeMenu: string;
@@ -84,6 +86,15 @@ export interface Dictionary {
       description: string;
     }[];
   };
+  process: {
+    title: string;
+    titleAccent: string;
+    subtitle: string;
+    steps: {
+      title: string;
+      description: string;
+    }[];
+  };
   tools: {
     title: string;
     titleAccent: string;
@@ -91,6 +102,15 @@ export interface Dictionary {
     blocks: {
       title: string;
       skills: string[];
+    }[];
+  };
+  faq: {
+    title: string;
+    titleAccent: string;
+    subtitle: string;
+    items: {
+      question: string;
+      answer: string;
     }[];
   };
   footer: {
@@ -101,6 +121,7 @@ export interface Dictionary {
     copyright: string;
   };
   common: {
+    brandName: string;
     whatsappCta: string;
     whatsappAria: string;
     languageToggleAria: string;
@@ -117,7 +138,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: {
       about: "Sobre",
       portfolio: "Portfólio",
+      process: "Processo",
       tools: "Ferramentas",
+      faq: "FAQ",
       contact: "Contato",
       openMenu: "Abrir menu",
       closeMenu: "Fechar menu",
@@ -244,6 +267,29 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
       ],
     },
+    process: {
+      title: "Como",
+      titleAccent: "Trabalhamos",
+      subtitle:
+        "Um fluxo claro do diagnóstico à entrega contínua — sem surpresas e com foco em resultado operacional.",
+      steps: [
+        {
+          title: "Diagnóstico",
+          description:
+            "Mapeamos gargalos, rotinas manuais e sistemas atuais (ERP, planilhas, canais) para definir o que automatizar primeiro.",
+        },
+        {
+          title: "Automação",
+          description:
+            "Desenvolvemos integrações via API e robôs sob medida, com testes, documentação e entrega alinhada ao seu processo.",
+        },
+        {
+          title: "Acompanhamento",
+          description:
+            "Monitoramos estabilidade, ajustamos fluxos e evoluímos a solução conforme o negócio escala.",
+        },
+      ],
+    },
     tools: {
       title: "Caixa de",
       titleAccent: "Ferramentas",
@@ -276,15 +322,49 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
       ],
     },
+    faq: {
+      title: "Perguntas",
+      titleAccent: "Frequentes",
+      subtitle:
+        "Respostas diretas para quem quer automatizar, integrar ERP ou contratar BPO com tecnologia.",
+      items: [
+        {
+          question: "Quais ERPs vocês integram?",
+          answer:
+            "Trabalhamos com Conta Azul, Olist (Tiny), VHSYS e outros sistemas com API documentada. Avaliamos o cenário e definimos a melhor forma de conexão.",
+        },
+        {
+          question: "Quanto tempo leva uma automação típica?",
+          answer:
+            "Depende do escopo: automações pontuais podem sair em poucos dias; ecossistemas com vários fluxos e integrações costumam levar de 2 a 6 semanas, com entregas parciais.",
+        },
+        {
+          question: "Vocês fazem BPO e desenvolvimento juntos?",
+          answer:
+            "Sim. Unimos operação financeira (BPO) com engenharia em Python e automação — o mesmo time entende a dor e implementa a solução.",
+        },
+        {
+          question: "Como funciona a contratação?",
+          answer:
+            "Começamos por uma conversa no WhatsApp para entender o problema, alinhamos escopo e proposta, e seguimos com diagnóstico e execução sob demanda ou por projeto.",
+        },
+        {
+          question: "Preciso ter API do ERP?",
+          answer:
+            "O ideal é API oficial. Quando ela não cobre um fluxo crítico, usamos automação assistida com segurança e rastreabilidade — sempre priorizando estabilidade.",
+        },
+      ],
+    },
     footer: {
       headline: "Precisa otimizar a rotina do seu negócio?",
       subBefore: "Vamos construir a",
       subAccent: "solução ideal",
       subAfter: ".",
       copyright:
-        "Zwei — BPO Financeiro, Automação & Desenvolvimento Web. Todos os direitos reservados.",
+        "Zwei Coorp's — BPO Financeiro, Automação & Desenvolvimento Web. Todos os direitos reservados.",
     },
     common: {
+      brandName: "Zwei Coorp's",
       whatsappCta: "Fale Comigo no WhatsApp",
       whatsappAria: "Fale comigo no WhatsApp",
       languageToggleAria: "Alternar idioma",
@@ -346,7 +426,9 @@ export const dictionaries: Record<Locale, Dictionary> = {
     nav: {
       about: "About",
       portfolio: "Portfolio",
+      process: "Process",
       tools: "Toolkit",
+      faq: "FAQ",
       contact: "Contact",
       openMenu: "Open menu",
       closeMenu: "Close menu",
@@ -474,6 +556,29 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
       ],
     },
+    process: {
+      title: "How We",
+      titleAccent: "Work",
+      subtitle:
+        "A clear path from diagnosis to continuous delivery — no surprises, focused on operational results.",
+      steps: [
+        {
+          title: "Diagnosis",
+          description:
+            "We map bottlenecks, manual routines, and current systems (ERP, spreadsheets, channels) to define what to automate first.",
+        },
+        {
+          title: "Automation",
+          description:
+            "We build API integrations and tailored bots, with testing, documentation, and delivery aligned to your process.",
+        },
+        {
+          title: "Follow-up",
+          description:
+            "We monitor stability, refine workflows, and evolve the solution as the business scales.",
+        },
+      ],
+    },
     tools: {
       title: "Toolkit",
       titleAccent: "Skills",
@@ -506,15 +611,49 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
       ],
     },
+    faq: {
+      title: "Frequently Asked",
+      titleAccent: "Questions",
+      subtitle:
+        "Straight answers for anyone looking to automate, integrate ERPs, or hire tech-enabled BPO.",
+      items: [
+        {
+          question: "Which ERPs do you integrate with?",
+          answer:
+            "We work with Conta Azul, Olist (Tiny), VHSYS, and other systems with a documented API. We assess the scenario and define the best connection approach.",
+        },
+        {
+          question: "How long does a typical automation take?",
+          answer:
+            "It depends on scope: focused automations can ship in a few days; multi-flow ecosystems with several integrations usually take 2 to 6 weeks, with incremental deliveries.",
+        },
+        {
+          question: "Do you offer BPO and development together?",
+          answer:
+            "Yes. We combine financial operations (BPO) with Python engineering and automation — the same team understands the pain and builds the solution.",
+        },
+        {
+          question: "How does engagement work?",
+          answer:
+            "We start with a WhatsApp conversation to understand the problem, align scope and proposal, then move into diagnosis and execution — on-demand or project-based.",
+        },
+        {
+          question: "Do I need an ERP API?",
+          answer:
+            "An official API is ideal. When it doesn't cover a critical flow, we use assisted automation with safety and traceability — always prioritizing stability.",
+        },
+      ],
+    },
     footer: {
       headline: "Need to optimize your business operations?",
       subBefore: "Let's build the",
       subAccent: "ideal solution",
       subAfter: ".",
       copyright:
-        "Zwei — Financial BPO, Automation & Web Development. All rights reserved.",
+        "Zwei Coorp's — Financial BPO, Automation & Web Development. All rights reserved.",
     },
     common: {
+      brandName: "Zwei Coorp's",
       whatsappCta: "Message Me on WhatsApp",
       whatsappAria: "Message me on WhatsApp",
       languageToggleAria: "Switch language",

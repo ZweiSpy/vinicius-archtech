@@ -13,7 +13,9 @@ export function Header() {
   const navLinks = [
     { href: "#sobre", label: dict.nav.about },
     { href: "#portfolio", label: dict.nav.portfolio },
+    { href: "#processo", label: dict.nav.process },
     { href: "#ferramentas", label: dict.nav.tools },
+    { href: "#faq", label: dict.nav.faq },
     { href: "#contato", label: dict.nav.contact },
   ];
 
@@ -34,12 +36,12 @@ export function Header() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <a
           href="#"
-          className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-xl font-bold text-transparent"
+          className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-lg font-bold text-transparent sm:text-xl"
         >
-          Zwei
+          {dict.common.brandName}
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -57,7 +59,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="text-zinc-400 transition-colors hover:text-cyan-400 md:hidden"
+            className="text-zinc-400 transition-colors hover:text-cyan-400 lg:hidden"
             aria-label={isOpen ? dict.nav.closeMenu : dict.nav.openMenu}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -66,7 +68,7 @@ export function Header() {
       </nav>
 
       {isOpen && (
-        <div className="border-b border-white/10 bg-zinc-950/95 backdrop-blur-lg md:hidden">
+        <div className="border-b border-white/10 bg-zinc-950/95 backdrop-blur-lg lg:hidden">
           <ul className="flex flex-col gap-4 px-6 py-4">
             {navLinks.map((link) => (
               <li key={link.href}>

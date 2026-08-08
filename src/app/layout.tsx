@@ -9,6 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vinicius-archtech.vercel.app"),
   title: "Zwei Coorp's | Inovação e Engenharia de Dados",
   description:
     "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
@@ -28,12 +29,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Zwei Coorp's",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Zwei Coorp's",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zwei Coorp's | Inovação e Engenharia de Dados",
     description:
       "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
+    images: ["/opengraph-image.png"],
   },
 };
 

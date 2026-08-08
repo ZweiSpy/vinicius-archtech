@@ -6,7 +6,9 @@ import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { IntegrationsSection } from "@/components/IntegrationsSection";
+import { ProcessSection } from "@/components/ProcessSection";
 import { ToolsSection } from "@/components/ToolsSection";
+import { FaqSection } from "@/components/FaqSection";
 import { FooterSection } from "@/components/FooterSection";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
@@ -19,7 +21,9 @@ export default function Home() {
         <AboutSection />
         <PortfolioSection />
         <IntegrationsSection />
+        <ProcessSection />
         <ToolsSection />
+        <FaqSection />
         <FooterSection />
       </main>
       <FloatingWhatsApp />
