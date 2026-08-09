@@ -8,8 +8,44 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = "https://vinicius-archtech.vercel.app";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  name: "Zwei Coorp's",
+  url: SITE_URL,
+  description:
+    "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
+  areaServed: {
+    "@type": "Country",
+    name: "Brazil",
+  },
+  sameAs: [
+    "https://github.com/ZweiSpy",
+    "https://www.instagram.com/vinicius.archtech/",
+    "https://www.workana.com/freelancer/f60aa1ec5d243799cce32b2d05406711",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    availableLanguage: ["Portuguese", "English"],
+    url: "https://wa.me/5521976044130",
+  },
+  knowsAbout: [
+    "Financial BPO",
+    "Process Automation",
+    "Python",
+    "ERP Integration",
+    "Conta Azul",
+    "Olist Tiny",
+    "VHSYS",
+    "Web Development",
+  ],
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vinicius-archtech.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: "Zwei Coorp's | Inovação e Engenharia de Dados",
   description:
     "Soluções inteligentes em BPO Financeiro, Inteligência Artificial e Automação de Processos. Transformando complexidade em eficiência operacional.",
@@ -54,7 +90,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="dark">
-      <body className={`${inter.variable} font-sans`}>{children}</body>
+      <body className={`${inter.variable} font-sans`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

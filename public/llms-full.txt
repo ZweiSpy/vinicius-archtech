@@ -1,0 +1,45 @@
+# Zwei Coorp's — Full context for AI agents
+
+> Authoritative summary of https://vinicius-archtech.vercel.app (bilingual PT/EN portfolio and services site).
+
+## Who we are
+
+Zwei Coorp's delivers intelligent solutions in Financial BPO, Artificial Intelligence, Process Automation, and Data Engineering. The founder combines Human Resource Management background with hands-on financial/tax operations (Brazilian tax frameworks / Simples Nacional, ERP management, reconciliation, billing in complex industries such as heavy machinery) and Python engineering to automate repetitive, error-prone work.
+
+## What we offer
+
+1. **Financial BPO** — Account structuring, daily reconciliation, performance reporting, decision support with real data.
+2. **Process automation & ERP integration** — Python, Selenium, official APIs; Conta Azul, Olist (Tiny), VHSYS, and other documented ERPs. When an API does not cover a critical flow, assisted automation is used with safety and traceability.
+3. **Web development** — Conversion-focused landing pages and institutional sites (example: Elite Rodas — https://eliterodas.com.br).
+4. **Product** — Zwei Finance: Android APK for financial management and cash-flow visibility (demo via WhatsApp).
+
+## How we work
+
+1. **Diagnosis** — Map bottlenecks, manual routines, and current systems.
+2. **Automation** — Build API integrations and tailored bots with testing and documentation.
+3. **Follow-up** — Monitor stability and evolve as the business scales.
+
+## Notable projects
+
+- **Architect Project** — Full ERP automation suite (Python + Selenium + Conta Azul + Telegram bots for service orders). Impact: drastic reduction of operational time and manual failures.
+- **ZBot** — Deep-scan engine for fiscal/financial documents; audit and fast file location.
+- **Elite Rodas** — Institutional web presence optimized for conversion.
+- **Freelance Financial BPO** — Structuring and reporting via platforms such as Workana.
+
+## FAQ (short)
+
+- ERPs: Conta Azul, Olist (Tiny), VHSYS, others with documented APIs.
+- Typical automation: days for focused flows; 2–6 weeks for multi-flow ecosystems with incremental delivery.
+- BPO + development: yes, same team.
+- Engagement: WhatsApp conversation → scope → diagnosis → execution.
+- API required: preferred; assisted automation when API gaps exist.
+
+## Contact
+
+- Site: https://vinicius-archtech.vercel.app/#contato
+- WhatsApp: https://wa.me/5521976044130
+- GitHub: https://github.com/ZweiSpy
+- Instagram: https://www.instagram.com/vinicius.archtech/
+- Workana: https://www.workana.com/freelancer/f60aa1ec5d243799cce32b2d05406711
+- Index for LLMs: https://vinicius-archtech.vercel.app/llms.txt
+- Sitemap: https://vinicius-archtech.vercel.app/sitemap.xml
