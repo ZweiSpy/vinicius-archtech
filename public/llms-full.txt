@@ -1,6 +1,6 @@
 # Zwei Coorp's — Full context for AI agents
 
-> Authoritative summary of https://vinicius-archtech.vercel.app (bilingual PT/EN portfolio and services site).
+> Authoritative summary of https://zweicoorp.com.br (bilingual PT/EN portfolio and services site).
 
 ## Who we are
 
@@ -36,10 +36,10 @@ Zwei Coorp's delivers intelligent solutions in Financial BPO, Artificial Intelli
 
 ## Contact
 
-- Site: https://vinicius-archtech.vercel.app/#contato
+- Site: https://zweicoorp.com.br/#contato
 - WhatsApp: https://wa.me/5521976044130
 - GitHub: https://github.com/ZweiSpy
 - Instagram: https://www.instagram.com/vinicius.archtech/
 - Workana: https://www.workana.com/freelancer/f60aa1ec5d243799cce32b2d05406711
-- Index for LLMs: https://vinicius-archtech.vercel.app/llms.txt
-- Sitemap: https://vinicius-archtech.vercel.app/sitemap.xml
+- Index for LLMs: https://zweicoorp.com.br/llms.txt
+- Sitemap: https://zweicoorp.com.br/sitemap.xml

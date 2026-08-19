@@ -2,30 +2,30 @@
 
 > Soluções inteligentes em BPO Financeiro, Inteligência Artificial, Automação de Processos e Engenharia de Dados. Integrações com ERPs (Conta Azul, Olist/Tiny, VHSYS) via API e automação em Python.
 
-Site bilíngue (PT/EN). Sitemap: https://vinicius-archtech.vercel.app/sitemap.xml  
-Corpus completo para agentes: https://vinicius-archtech.vercel.app/llms-full.txt
+Site bilíngue (PT/EN). Sitemap: https://zweicoorp.com.br/sitemap.xml  
+Corpus completo para agentes: https://zweicoorp.com.br/llms-full.txt
 
 ## About
 
-- [Sobre / About](https://vinicius-archtech.vercel.app/#sobre): Perfil híbrido em gestão financeira, RH e programação Python para eliminar gargalos operacionais.
-- [Como trabalhamos / Process](https://vinicius-archtech.vercel.app/#processo): Diagnóstico → Automação → Acompanhamento.
+- [Sobre / About](https://zweicoorp.com.br/#sobre): Perfil híbrido em gestão financeira, RH e programação Python para eliminar gargalos operacionais.
+- [Como trabalhamos / Process](https://zweicoorp.com.br/#processo): Diagnóstico → Automação → Acompanhamento.
 
 ## Services
 
-- [Integrações ERP](https://vinicius-archtech.vercel.app/#integracoes): Conta Azul, Olist (Tiny), VHSYS e outros via API oficial; automação assistida quando a API não cobre o fluxo.
-- [Ferramentas / Toolkit](https://vinicius-archtech.vercel.app/#ferramentas): Python, Selenium, BPO Financeiro, Simples Nacional, Git/GitHub, IA aplicada.
-- [FAQ](https://vinicius-archtech.vercel.app/#faq): ERPs suportados, prazos, BPO + desenvolvimento, contratação e necessidade de API.
+- [Integrações ERP](https://zweicoorp.com.br/#integracoes): Conta Azul, Olist (Tiny), VHSYS e outros via API oficial; automação assistida quando a API não cobre o fluxo.
+- [Ferramentas / Toolkit](https://zweicoorp.com.br/#ferramentas): Python, Selenium, BPO Financeiro, Simples Nacional, Git/GitHub, IA aplicada.
+- [FAQ](https://zweicoorp.com.br/#faq): ERPs suportados, prazos, BPO + desenvolvimento, contratação e necessidade de API.
 
 ## Portfolio
 
-- [Portfólio de projetos](https://vinicius-archtech.vercel.app/#portfolio): Cases de automação ERP, deep-scan fiscal, desenvolvimento web e app financeiro.
+- [Portfólio de projetos](https://zweicoorp.com.br/#portfolio): Cases de automação ERP, deep-scan fiscal, desenvolvimento web e app financeiro.
 - [Elite Rodas](https://eliterodas.com.br): Site institucional e landing de conversão (case web).
-- [Projeto Arquiteto](https://vinicius-archtech.vercel.app/#portfolio): Ecossistema de automação Python/Selenium + Conta Azul + Telegram.
-- [Zwei Finance](https://vinicius-archtech.vercel.app/#portfolio): App Android de gestão financeira (APK / demonstração).
+- [Projeto Arquiteto](https://zweicoorp.com.br/#portfolio): Ecossistema de automação Python/Selenium + Conta Azul + Telegram.
+- [Zwei Finance](https://zweicoorp.com.br/#portfolio): App Android de gestão financeira (APK / demonstração).
 
 ## Contact
 
-- [Contato / WhatsApp](https://vinicius-archtech.vercel.app/#contato): CTA principal para orçamentos e diagnóstico.
+- [Contato / WhatsApp](https://zweicoorp.com.br/#contato): CTA principal para orçamentos e diagnóstico.
 - [WhatsApp direto](https://wa.me/5521976044130): Canal preferencial de conversão.
 - [GitHub](https://github.com/ZweiSpy): Código e projetos públicos.
 - [Instagram](https://www.instagram.com/vinicius.archtech/): Presença da marca.

@@ -8,7 +8,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://vinicius-archtech.vercel.app";
+const SITE_URL = "https://zweicoorp.com.br";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
