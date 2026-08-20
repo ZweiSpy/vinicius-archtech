@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-export type ZweiFinanceAppPath = "auth/confirmed" | "reset-password";
+export type ZweiFinanceAppPath = "auth-confirmed" | "reset-password";
 
 interface ZweiFinanceDeepLinkProps {
   appPath: ZweiFinanceAppPath;
