@@ -119,6 +119,8 @@ export interface Dictionary {
     subAccent: string;
     subAfter: string;
     copyright: string;
+    privacyLabel: string;
+    termsLabel: string;
   };
   common: {
     brandName: string;
@@ -362,6 +364,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       subAfter: ".",
       copyright:
         "Zwei Coorp's — BPO Financeiro, Automação & Desenvolvimento Web. Todos os direitos reservados.",
+      privacyLabel: "Política de Privacidade",
+      termsLabel: "Termos de Uso",
     },
     common: {
       brandName: "Zwei Coorp's",
@@ -651,6 +655,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       subAfter: ".",
       copyright:
         "Zwei Coorp's — Financial BPO, Automation & Web Development. All rights reserved.",
+      privacyLabel: "Privacy Policy",
+      termsLabel: "Terms of Use",
     },
     common: {
       brandName: "Zwei Coorp's",

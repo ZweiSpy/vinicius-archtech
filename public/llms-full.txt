@@ -43,3 +43,5 @@ Zwei Coorp's delivers intelligent solutions in Financial BPO, Artificial Intelli
 - Workana: https://www.workana.com/freelancer/f60aa1ec5d243799cce32b2d05406711
 - Index for LLMs: https://zweicoorp.com.br/llms.txt
 - Sitemap: https://zweicoorp.com.br/sitemap.xml
+- Privacy Policy: https://zweicoorp.com.br/politica-de-privacidade
+- Terms of Use: https://zweicoorp.com.br/termos-de-uso

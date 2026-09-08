@@ -51,6 +51,26 @@ export function FooterSection() {
             <p className="text-sm text-zinc-500">
               © {new Date().getFullYear()} {footer.copyright}
             </p>
+            <nav
+              aria-label="Legal"
+              className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs text-zinc-500 sm:text-sm"
+            >
+              <a
+                href="/politica-de-privacidade"
+                className="transition-colors hover:text-cyan-400"
+              >
+                {footer.privacyLabel}
+              </a>
+              <span className="text-zinc-600" aria-hidden>
+                ·
+              </span>
+              <a
+                href="/termos-de-uso"
+                className="transition-colors hover:text-cyan-400"
+              >
+                {footer.termsLabel}
+              </a>
+            </nav>
           </div>
         </div>
       </footer>

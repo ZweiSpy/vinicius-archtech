@@ -30,3 +30,8 @@ Corpus completo para agentes: https://zweicoorp.com.br/llms-full.txt
 - [GitHub](https://github.com/ZweiSpy): Código e projetos públicos.
 - [Instagram](https://www.instagram.com/vinicius.archtech/): Presença da marca.
 - [Workana](https://www.workana.com/freelancer/f60aa1ec5d243799cce32b2d05406711): Perfil freelancer.
+
+## Legal
+
+- [Política de Privacidade / Privacy Policy](https://zweicoorp.com.br/politica-de-privacidade): Tratamento de dados do site e do app Zwei Finance (LGPD).
+- [Termos de Uso / Terms of Use](https://zweicoorp.com.br/termos-de-uso): Condições de uso do site Zwei Coorp's e do aplicativo Zwei Finance.
