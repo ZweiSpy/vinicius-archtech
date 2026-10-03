@@ -12,6 +12,7 @@ export function Header() {
 
   const navLinks = [
     { href: "#sobre", label: dict.nav.about },
+    { href: "#servicos", label: dict.nav.services },
     { href: "#portfolio", label: dict.nav.portfolio },
     { href: "#processo", label: dict.nav.process },
     { href: "#ferramentas", label: dict.nav.tools },

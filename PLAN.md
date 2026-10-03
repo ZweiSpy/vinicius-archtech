@@ -19,18 +19,18 @@
 - [x] Footer com Política e Termos, legível em mobile
 - [x] Home e `/auth/confirmed` + `/auth/reset-password` intactos (diff vazio)
 - [x] `AGENTS.md`, `PLAN.md`, `SDD.md` e specs em `docs/specs/` presentes
-- [ ] Placeholders `[CNPJ]` / `[ENDEREÇO]` preenchidos pelo PO quando disponíveis
-- [ ] Aceite jurídico / revisão do PO
+- [x] Textos legais adequados para modelo Pessoa Física / Desenvolvedor Independente (sem expor endereço residencial nem CNPJ, comarca do RJ e canal zwei@zweicoorp.com.br)
+- [x] Cláusula de sucessão e transição futura para Pessoa Jurídica (PJ) integrada
+- [x] LinkedIn temporariamente desativado no site a pedido do PO (preparado para novo perfil)
+- [x] Seção Serviços + CTAs de alta conversão e Botão Flutuante de WhatsApp implementados
 - [ ] Deploy em `zweicoorp.com.br` (commit + merge / preview → main)
 
 ### Não fazer nesta entrega
 
-- Alterar Hero, Portfolio, Integrações, Processo, FAQ, Terminal
-- Alterar deep links ou páginas auth
+- Alterar deep links ou páginas auth (/auth/*)
 - Assessoramento jurídico formal (texto é template LGPD-oriented)
 
 ### Próximos (backlog)
 
-- Preencher CNPJ e endereço real
-- Seção Serviços + CTAs (conversão)
-- LinkedIn real em `constants.ts`
+- Inserir link do novo LinkedIn quando criado pelo PO
+- Formalização de CNPJ e migração contratual futura (quando houver abertura da PJ)

@@ -1,7 +1,7 @@
 # Spec: Processamento de dados
 
-**Controladora:** Zwei Coorporações LTDA (`[CNPJ]`, `[ENDEREÇO]`)  
-**Contato privacidade (sugerido):** privacidade@zweicoorp.com.br  
+**Controlador:** Desenvolvedor independente responsável pela iniciativa Zwei Coorp's (Rio de Janeiro - RJ, Brasil)  
+**Contato oficial (privacidade e suporte):** zwei@zweicoorp.com.br  
 **Produtos:** site Zwei Coorp's · app Zwei Finance
 
 > Template operacional para textos LGPD. Não substitui parecer jurídico.

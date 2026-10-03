@@ -40,7 +40,15 @@ export function HeroSection() {
             {dict.hero.subtitle}
           </p>
 
-          <WhatsAppButton />
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <WhatsAppButton message="Olá Vinicius! Gostaria de um diagnóstico gratuito para entender como acelerar processos na minha empresa." />
+            <a
+              href="#servicos"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-zinc-300 backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/40 hover:bg-cyan-500/10 hover:text-white"
+            >
+              {dict.nav.services}
+            </a>
+          </div>
         </motion.div>
 
         <motion.div

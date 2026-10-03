@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const socialItems = [
   { label: "GitHub", href: SOCIAL_LINKS.github, icon: Github },
-  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin, icon: Linkedin },
+  // { label: "LinkedIn", href: SOCIAL_LINKS.linkedin, icon: Linkedin }, // Ocultado temporariamente a pedido do PO
   { label: "Workana", href: SOCIAL_LINKS.workana, icon: ExternalLink },
   { label: "Instagram", href: SOCIAL_LINKS.instagram, icon: Instagram },
 ];

@@ -4,6 +4,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { ServicesSection } from "@/components/ServicesSection";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { IntegrationsSection } from "@/components/IntegrationsSection";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutSection />
+        <ServicesSection />
         <PortfolioSection />
         <IntegrationsSection />
         <ProcessSection />

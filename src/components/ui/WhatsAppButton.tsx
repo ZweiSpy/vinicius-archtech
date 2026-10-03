@@ -1,22 +1,25 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface WhatsAppButtonProps {
   variant?: "primary" | "outline" | "floating";
   className?: string;
   label?: string;
+  message?: string;
 }
 
 export function WhatsAppButton({
   variant = "primary",
   className = "",
   label,
+  message,
 }: WhatsAppButtonProps) {
   const { dict } = useLanguage();
   const ctaLabel = label ?? dict.common.whatsappCta;
+  const targetHref = getWhatsAppUrl(message);
 
   const baseStyles =
     "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300";
@@ -45,7 +48,7 @@ export function WhatsAppButton({
   if (variant === "floating") {
     return (
       <a
-        href={WHATSAPP_URL}
+        href={targetHref}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={dict.common.whatsappAria}
@@ -58,7 +61,7 @@ export function WhatsAppButton({
 
   return (
     <a
-      href={WHATSAPP_URL}
+      href={targetHref}
       target="_blank"
       rel="noopener noreferrer"
       className={`${baseStyles} ${variants[variant]} ${className}`}

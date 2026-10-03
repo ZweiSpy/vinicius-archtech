@@ -14,7 +14,7 @@
 
 Cada página cobre:
 
-1. **Zwei Coorporações LTDA** (controladora) — placeholders `[CNPJ]`, `[ENDEREÇO]`
+1. **Desenvolvedor Independente (Controlador)** — Zwei Coorp's (Rio de Janeiro - RJ, Brasil), contato via zwei@zweicoorp.com.br
 2. **Site** zweicoorp.com.br (portfólio / serviços)
 3. **App Zwei Finance** (gestão financeira pessoal / custo de vida)
 

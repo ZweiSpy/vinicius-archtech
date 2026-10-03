@@ -12,6 +12,7 @@ import {
   ExternalLink,
   Smartphone,
   MessageCircle,
+  Sparkles,
 } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -22,6 +23,7 @@ const PROJECT_ICONS: Record<string, ReactNode> = {
   arquiteto: <Bot className="h-6 w-6" />,
   zbot: <Search className="h-6 w-6" />,
   "elite-rodas": <Globe className="h-6 w-6" />,
+  "filipe-sales": <Sparkles className="h-6 w-6" />,
   "zwei-finance": <Smartphone className="h-6 w-6" />,
   bpo: <TrendingUp className="h-6 w-6" />,
 };

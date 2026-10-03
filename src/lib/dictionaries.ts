@@ -16,6 +16,7 @@ export interface TerminalLine {
 export interface Dictionary {
   nav: {
     about: string;
+    services: string;
     portfolio: string;
     process: string;
     tools: string;
@@ -75,6 +76,21 @@ export interface Dictionary {
       featured?: boolean;
       href?: string;
       cta?: "site" | "whatsapp";
+    }[];
+  };
+  services: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    subtitle: string;
+    ctaButton: string;
+    items: {
+      id: string;
+      title: string;
+      description: string;
+      badge?: string;
+      deliverables: string[];
+      ctaMessage: string;
     }[];
   };
   integrations: {
@@ -139,6 +155,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
   pt: {
     nav: {
       about: "Sobre",
+      services: "Serviços",
       portfolio: "Portfólio",
       process: "Processo",
       tools: "Ferramentas",
@@ -226,6 +243,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
           cta: "site",
         },
         {
+          id: "filipe-sales",
+          title: "Desenvolvimento Web — Filipe Sales Perfumes",
+          description:
+            "Desenvolvimento de landing page e vitrine digital de alta performance para apresentação de catálogo de perfumaria e posicionamento de marca. Design sofisticado e arquitetura focada em conversão.",
+          impact: "Posicionamento de marca premium e canal direto de atração de clientes.",
+          tags: ["Next.js", "Landing Page", "SEO", "Conversão"],
+          cta: "whatsapp",
+        },
+        {
           id: "zwei-finance",
           title: "Zwei Finance — App de Gestão Financeira",
           description:
@@ -242,6 +268,70 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "Prestação de serviços especializados de estruturação de contas, conciliação diária e relatórios de performance para empresas parceiras através de plataformas como Workana e 99freelas.",
           impact: "Tomada de decisão baseada em dados reais.",
           tags: ["BPO", "Conciliação", "Workana", "99freelas"],
+        },
+      ],
+    },
+    services: {
+      badge: "Soluções Sob Medida",
+      title: "Serviços Especializados para",
+      titleAccent: "Acelerar sua Empresa",
+      subtitle:
+        "Combinamos engenharia de software de ponta e automação de processos para cortar tarefas manuais e gerar presença digital de alta conversão.",
+      ctaButton: "Solicitar Orçamento / Diagnóstico",
+      items: [
+        {
+          id: "web",
+          title: "Sites & Landing Pages de Alta Conversão",
+          description:
+            "Desenvolvimento web em Next.js com arquitetura ultra-rápida, design premium e SEO técnico estruturado para transformar visitantes em clientes qualificados.",
+          badge: "Mais Procurado",
+          deliverables: [
+            "Carregamento instantâneo (100 no Google PageSpeed)",
+            "Design responsivo com tema dark moderno",
+            "Integração direta com WhatsApp e CRM",
+          ],
+          ctaMessage:
+            "Olá Vinicius! Gostaria de um orçamento para criação de um site / landing page de alta conversão.",
+        },
+        {
+          id: "rpa",
+          title: "Automação de Processos & Robôs (RPA)",
+          description:
+            "Robôs e scripts em Python integrados ao Conta Azul, Tiny e VHSYS para emissão automática de O.S., varredura fiscal profunda e alertas em tempo real no Telegram.",
+          badge: "Eficiência Máxima",
+          deliverables: [
+            "Robôs de emissão e envio automático de ordens de serviço",
+            "Deep-scan de documentos fiscais e conciliação",
+            "Economia média estimada de mais de 100 horas/mês",
+          ],
+          ctaMessage:
+            "Olá Vinicius! Quero automatizar rotinas manuais da minha empresa com robôs e integração com ERP.",
+        },
+        {
+          id: "apps",
+          title: "Aplicativos & Softwares Sob Medida",
+          description:
+            "Aplicações web e mobile (Android) construídas especificamente para resolver gargalos da sua operação, com foco em facilidade de uso e autonomia de gestão.",
+          deliverables: [
+            "Aplicativos Android e plataformas em React/Next.js",
+            "Autenticação segura e banco de dados em nuvem",
+            "Dashboards operacionais e portais de clientes",
+          ],
+          ctaMessage:
+            "Olá Vinicius! Tenho um projeto de aplicativo/sistema sob medida e gostaria de conversar sobre o desenvolvimento.",
+        },
+        {
+          id: "bpo",
+          title: "BPO Financeiro & Estruturação de Contas",
+          description:
+            "Organização profissional de fluxo de caixa, conciliação bancária diária e relatórios de DRE e performance para embasar decisões com dados reais.",
+          deliverables: [
+            "Conciliação diária rigorosa de entradas e saídas",
+            "Relatórios mensais de saúde e resultado financeiro",
+            "Estruturação e saneamento de contas no ERP",
+          ],
+          ctaMessage:
+            "Olá Vinicius! Gostaria de conhecer melhor os serviços de estruturação e BPO Financeiro.",
         },
       ],
     },
@@ -429,6 +519,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
   en: {
     nav: {
       about: "About",
+      services: "Services",
       portfolio: "Portfolio",
       process: "Process",
       tools: "Toolkit",
@@ -517,6 +608,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
           cta: "site",
         },
         {
+          id: "filipe-sales",
+          title: "Web Development — Filipe Sales Perfumes",
+          description:
+            "Development of a high-performance landing page and digital showcase for fragrance catalog presentation and brand positioning. Sophisticated design and conversion-focused architecture.",
+          impact: "Premium brand positioning and direct customer acquisition channel.",
+          tags: ["Next.js", "Landing Page", "SEO", "Conversion"],
+          cta: "whatsapp",
+        },
+        {
           id: "zwei-finance",
           title: "Zwei Finance — Financial Management App",
           description:
@@ -533,6 +633,70 @@ export const dictionaries: Record<Locale, Dictionary> = {
             "Specialized services in account structuring, daily reconciliation, and performance reporting for partner companies through platforms such as Workana and 99freelas.",
           impact: "Decision-making grounded in real data.",
           tags: ["BPO", "Reconciliation", "Workana", "99freelas"],
+        },
+      ],
+    },
+    services: {
+      badge: "Tailored Solutions",
+      title: "Specialized Services to",
+      titleAccent: "Scale Your Business",
+      subtitle:
+        "Combining cutting-edge software engineering and operational automation to eliminate manual tasks and establish high-converting digital presence.",
+      ctaButton: "Request a Proposal / Diagnosis",
+      items: [
+        {
+          id: "web",
+          title: "High-Converting Websites & Landing Pages",
+          description:
+            "Next.js web development engineered for ultra-fast performance, premium aesthetics, and technical SEO designed to convert traffic into paying clients.",
+          badge: "Most Popular",
+          deliverables: [
+            "Instant loading speeds (100 on Google PageSpeed)",
+            "Responsive layout with modern dark theme",
+            "Direct WhatsApp and CRM lead capture",
+          ],
+          ctaMessage:
+            "Hello Vinicius! I'd like a quote for a high-converting website or landing page.",
+        },
+        {
+          id: "rpa",
+          title: "Process Automation & Robotics (RPA)",
+          description:
+            "Python automation suites integrated with ERPs (Conta Azul, Tiny, VHSYS) for automated work orders, deep fiscal scans, and instant Telegram bot alerts.",
+          badge: "Maximum Efficiency",
+          deliverables: [
+            "Automated work order generation and delivery bots",
+            "Deep-scan of fiscal records and reconciliation",
+            "Estimated average savings of 100+ hours/month",
+          ],
+          ctaMessage:
+            "Hello Vinicius! I want to automate my business workflows with RPA and ERP integration.",
+        },
+        {
+          id: "apps",
+          title: "Custom Applications & Software",
+          description:
+            "Web systems and Android mobile applications tailored to eliminate bottlenecks and provide operational autonomy for your company.",
+          deliverables: [
+            "Android apps and React/Next.js web platforms",
+            "Secure authentication and cloud persistence",
+            "Operational dashboards and client management portals",
+          ],
+          ctaMessage:
+            "Hello Vinicius! I have an idea for a custom app/software and would like to discuss development.",
+        },
+        {
+          id: "bpo",
+          title: "Financial BPO & Account Structuring",
+          description:
+            "Professional cash flow organization, daily account reconciliation, and executive financial reporting to support data-driven business decisions.",
+          deliverables: [
+            "Rigorous daily reconciliation of payables and receivables",
+            "Monthly executive performance and cash flow reports",
+            "Account setup and cleanup within your ERP",
+          ],
+          ctaMessage:
+            "Hello Vinicius! I'd like to learn more about your Financial BPO and structuring services.",
         },
       ],
     },
