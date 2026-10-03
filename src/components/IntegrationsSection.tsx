@@ -47,10 +47,10 @@ export function IntegrationsSection() {
                 <div className="mb-3 inline-flex self-start rounded-lg border border-cyan-500/30 bg-cyan-500/10 p-2.5 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:text-cyan-300">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="text-base font-semibold text-white sm:min-h-[1.75rem]">
                   {item.name}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400 sm:min-h-[3rem]">
                   {item.description}
                 </p>
               </motion.div>

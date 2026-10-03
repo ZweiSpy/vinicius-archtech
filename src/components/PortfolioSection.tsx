@@ -94,9 +94,13 @@ function ProjectCard({
           </button>
         </div>
 
-        <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
+        <h3 className="mt-4 text-lg font-semibold text-white sm:min-h-[3.5rem]">
+          {title}
+        </h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-zinc-400">{description}</p>
+        <p className="mt-2 text-sm leading-relaxed text-zinc-400 sm:min-h-[5rem]">
+          {description}
+        </p>
 
         <AnimatePresence>
           {expanded && (
@@ -116,10 +120,8 @@ function ProjectCard({
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
 
-      <div className="mt-6 border-t border-white/5 pt-4">
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="mt-auto flex min-h-[58px] flex-wrap content-start gap-2 pt-4">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -129,8 +131,10 @@ function ProjectCard({
             </span>
           ))}
         </div>
+      </div>
 
-        <div className="flex items-center justify-between gap-2 pt-1 min-h-[32px]">
+      <div className="mt-4 border-t border-white/5 pt-3">
+        <div className="flex items-center justify-between gap-2 min-h-[32px]">
           {(showSiteCta || showWhatsappCta) ? (
             <div>
               {showSiteCta && (

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   Code,
   DollarSign,
@@ -37,8 +38,12 @@ export function ToolsSection() {
             const Icon = meta.icon;
 
             return (
-              <div
+              <motion.div
                 key={block.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
               >
                 <div
@@ -47,11 +52,11 @@ export function ToolsSection() {
                   <Icon className="h-6 w-6 text-white" />
                 </div>
 
-                <h3 className="mb-4 text-lg font-semibold text-white">
+                <h3 className="mb-4 text-lg font-semibold text-white sm:min-h-[1.75rem]">
                   {block.title}
                 </h3>
 
-                <div className="flex flex-1 flex-wrap content-start gap-2">
+                <div className="flex flex-1 flex-wrap content-start gap-2 sm:min-h-[5.5rem]">
                   {block.skills.map((skill) => (
                     <span
                       key={skill}
@@ -61,7 +66,7 @@ export function ToolsSection() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

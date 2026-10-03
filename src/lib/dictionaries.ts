@@ -412,7 +412,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           title: "Idiomas e Diferenciais",
-          skills: ["Inglês", "Inteligência Artificial aplicada"],
+          skills: [
+            "Inglês",
+            "Inteligência Artificial aplicada",
+            "Engenharia de Prompts",
+            "Arquitetura de Soluções",
+          ],
         },
       ],
     },
@@ -779,7 +784,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           title: "Languages & Differentiators",
-          skills: ["English", "Applied Artificial Intelligence"],
+          skills: [
+            "English",
+            "Applied Artificial Intelligence",
+            "Prompt Engineering",
+            "Solution Architecture",
+          ],
         },
       ],
     },
