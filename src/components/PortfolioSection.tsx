@@ -65,98 +65,106 @@ function ProjectCard({
   const showWhatsappCta = cta === "whatsapp";
 
   return (
-    <GlassCard featured={featured}>
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
-            {PROJECT_ICONS[id]}
-          </div>
-          {featured && (
-            <span className="flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-xs font-medium text-amber-400">
-              <Star className="h-3 w-3 fill-amber-400" />
-              {labels.featured}
-            </span>
-          )}
-        </div>
-        <button
-          type="button"
-          onClick={() => setExpanded(!expanded)}
-          className="rounded-lg p-1 text-zinc-500 transition-colors hover:text-cyan-400"
-          aria-label={expanded ? labels.collapseAria : labels.expandAria}
-          aria-expanded={expanded}
-        >
-          <ChevronDown
-            className={`h-5 w-5 transition-transform duration-300 ${
-              expanded ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </div>
-
-      <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
-
-      <p className="mt-2 text-sm leading-relaxed text-zinc-400">{description}</p>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-md border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-zinc-400"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <AnimatePresence>
-        {expanded && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="mt-4 rounded-lg border border-cyan-500/20 bg-cyan-500/5 p-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
-                {labels.impact}
-              </p>
-              <p className="mt-1 text-sm text-zinc-300">{impact}</p>
+    <GlassCard className="flex h-full flex-col justify-between">
+      <div className="flex-1 flex flex-col">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400">
+              {PROJECT_ICONS[id]}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {featured && (
+              <span className="flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-xs font-medium text-amber-400">
+                <Star className="h-3 w-3 fill-amber-400" />
+                {labels.featured}
+              </span>
+            )}
+          </div>
+          <button
+            type="button"
+            onClick={() => setExpanded(!expanded)}
+            className="rounded-lg p-1 text-zinc-500 transition-colors hover:text-cyan-400"
+            aria-label={expanded ? labels.collapseAria : labels.expandAria}
+            aria-expanded={expanded}
+          >
+            <ChevronDown
+              className={`h-5 w-5 transition-transform duration-300 ${
+                expanded ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+        </div>
 
-      {(showSiteCta || showWhatsappCta) && (
-        <div className="mt-4">
-          {showSiteCta && (
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+        <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
+
+        <p className="mt-2 text-sm leading-relaxed text-zinc-400">{description}</p>
+
+        <AnimatePresence>
+          {expanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
             >
-              {labels.viewSite}
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
+              <div className="mt-4 rounded-lg border border-cyan-500/20 bg-cyan-500/5 p-4">
+                <p className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
+                  {labels.impact}
+                </p>
+                <p className="mt-1 text-sm text-zinc-300">{impact}</p>
+              </div>
+            </motion.div>
           )}
-          {showWhatsappCta && (
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+        </AnimatePresence>
+      </div>
+
+      <div className="mt-6 border-t border-white/5 pt-4">
+        <div className="flex flex-wrap gap-2 mb-4">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-md border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-zinc-400"
             >
-              {labels.whatsappDemo}
-              <MessageCircle className="h-3.5 w-3.5" />
-            </a>
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex items-center justify-between gap-2 pt-1 min-h-[32px]">
+          {(showSiteCta || showWhatsappCta) ? (
+            <div>
+              {showSiteCta && (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+                >
+                  {labels.viewSite}
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              )}
+              {showWhatsappCta && (
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+                >
+                  {labels.whatsappDemo}
+                  <MessageCircle className="h-3.5 w-3.5" />
+                </a>
+              )}
+            </div>
+          ) : (
+            <div />
+          )}
+
+          {!expanded && (
+            <p className="text-xs text-cyan-400/70">{labels.expandHint}</p>
           )}
         </div>
-      )}
-
-      {!expanded && (
-        <p className="mt-3 text-xs text-cyan-400/70">{labels.expandHint}</p>
-      )}
+      </div>
     </GlassCard>
   );
 }
@@ -195,6 +203,7 @@ export function PortfolioSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="h-full flex flex-col"
             >
               <ProjectCard
                 id={project.id}

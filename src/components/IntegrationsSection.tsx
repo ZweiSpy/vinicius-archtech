@@ -42,15 +42,15 @@ export function IntegrationsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
+                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
               >
-                <div className="mb-3 inline-flex rounded-lg border border-cyan-500/30 bg-cyan-500/10 p-2.5 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:text-cyan-300">
+                <div className="mb-3 inline-flex self-start rounded-lg border border-cyan-500/30 bg-cyan-500/10 p-2.5 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:text-cyan-300">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-base font-semibold text-white">
                   {item.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
                   {item.description}
                 </p>
               </motion.div>

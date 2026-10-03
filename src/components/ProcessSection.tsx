@@ -39,7 +39,7 @@ export function ProcessSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative rounded-2xl border border-cyan-500/20 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/20"
+                className="group relative flex h-full flex-col rounded-2xl border border-cyan-500/20 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/20"
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full border border-cyan-500/30 bg-cyan-500/10 font-mono text-sm font-semibold text-cyan-400">
@@ -52,7 +52,7 @@ export function ProcessSection() {
                 <h3 className="mb-2 text-lg font-semibold text-white">
                   {step.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-zinc-400">
+                <p className="flex-1 text-sm leading-relaxed text-zinc-400">
                   {step.description}
                 </p>
               </motion.div>

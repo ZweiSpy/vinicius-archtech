@@ -53,9 +53,10 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="h-full flex flex-col"
             >
               <GlassCard className="flex h-full flex-col justify-between p-6 sm:p-8">
-                <div>
+                <div className="flex-1 flex flex-col">
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-500/30 bg-cyan-500/10 shadow-inner shadow-cyan-500/10">
                       {SERVICE_ICONS[srv.id]}

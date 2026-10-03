@@ -39,10 +39,10 @@ export function ToolsSection() {
             return (
               <div
                 key={block.title}
-                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
+                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`mb-4 inline-flex rounded-xl bg-gradient-to-r ${meta.accent} p-3`}
+                  className={`mb-4 inline-flex self-start rounded-xl bg-gradient-to-r ${meta.accent} p-3`}
                 >
                   <Icon className="h-6 w-6 text-white" />
                 </div>
@@ -51,7 +51,7 @@ export function ToolsSection() {
                   {block.title}
                 </h3>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-1 flex-wrap content-start gap-2">
                   {block.skills.map((skill) => (
                     <span
                       key={skill}
